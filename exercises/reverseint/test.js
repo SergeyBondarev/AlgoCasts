@@ -1,11 +1,13 @@
-const reverseInt = require('./index');
+const { reverseInt, reverseIntWithString } = require('./index');
 
 test('ReverseInt function exists', () => {
   expect(reverseInt).toBeDefined();
+  expect(reverseIntWithString).toBeDefined();
 });
 
 test('ReverseInt handles 0 as an input', () => {
   expect(reverseInt(0)).toEqual(0);
+  expect(reverseIntWithString(0)).toEqual(0);
 });
 
 test('ReverseInt flips a positive number', () => {
@@ -13,6 +15,10 @@ test('ReverseInt flips a positive number', () => {
   expect(reverseInt(15)).toEqual(51);
   expect(reverseInt(90)).toEqual(9);
   expect(reverseInt(2359)).toEqual(9532);
+  expect(reverseIntWithString(5)).toEqual(5);
+  expect(reverseIntWithString(15)).toEqual(51);
+  expect(reverseIntWithString(90)).toEqual(9);
+  expect(reverseIntWithString(2359)).toEqual(9532);
 });
 
 test('ReverseInt flips a negative number', () => {
@@ -20,4 +26,8 @@ test('ReverseInt flips a negative number', () => {
   expect(reverseInt(-15)).toEqual(-51);
   expect(reverseInt(-90)).toEqual(-9);
   expect(reverseInt(-2359)).toEqual(-9532);
+  expect(reverseIntWithString(-5)).toEqual(-5);
+  expect(reverseIntWithString(-15)).toEqual(-51);
+  expect(reverseIntWithString(-90)).toEqual(-9);
+  expect(reverseIntWithString(-2359)).toEqual(-9532);
 });
